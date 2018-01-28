@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+		PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<plugins>
+	    <!-- com.github.pagehelper为PageHelper类所在包名     该报的作用：拦截所有的sql语句  ，并在所有的sql语句的后面加上limit的分页条件   -->
+	    <plugin interceptor="com.github.pagehelper.PageHelper">
+	        <!-- 设置数据库类型 Oracle,Mysql,MariaDB,SQLite,Hsqldb,PostgreSQL六种数据库-->
+	        <!-- MariaDB是mysql的分支     PostgreSQL比较先进的数据库 或许以后会用到    -->
+	        <!-- 相当于配置方言    每种数据库的方言不一致 -->        
+	        <property name="dialect" value="mysql"/>
+	    </plugin>
+	</plugins>
+
+</configuration>
